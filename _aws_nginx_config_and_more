@@ -2,7 +2,10 @@
   => Add HTTP and HTTPS in Inbound Rule
   
 2/ Install NodeJS
-  => Test: node hello.js (https://www.songonha.com/2022/12/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04.html)
+
+sudo apt install build-essential
+
+=> Test: node hello.js (https://www.songonha.com/2022/12/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04.html)
       
 3/ Install Nginx
   ==> Configuration
@@ -27,5 +30,16 @@
         proxy_cache_bypass $http_upgrade;
     }
 }
-
+   Unnote => Block Transfer
+   sudo nano /etc/nginx/nginx.conf
   
+   ...
+   http {
+      ...
+      server_names_hash_bucket_size 64;
+      ...
+   }
+   ...
+   
+   
+   
