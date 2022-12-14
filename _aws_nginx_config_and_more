@@ -1,9 +1,12 @@
 1/ AWS Inbound Config
   => Add HTTP and HTTPS in Inbound Rule
   
-2/ Install NodeJS
-
+2/ Install NodeJS, PM2
+sudo apt install npm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+nvm install 14.2
 sudo apt install build-essential
+sudo npm install pm2@latest -g
 
 => Test: node hello.js (https://www.songonha.com/2022/12/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04.html)
       
