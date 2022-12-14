@@ -44,6 +44,7 @@ sudo apt install build-essential
    
    Edit line 5 at index.js:
    port 9091 ==> 3000 (the same with port in location of nginx)
+   If you enable ufw, remember to allow port 3000.
    
    node index.js
    
