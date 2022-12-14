@@ -1,5 +1,5 @@
-1/ AWS Inbound Config
-  => Add HTTP and HTTPS in Inbound Rule
+1/ AWS Inbound Config (Add HTTP and HTTPS in Inbound Rule)
+  => Instance => Security => Inbound Rule.
   
 2/ Install NodeJS, PM2
 sudo apt install npm
