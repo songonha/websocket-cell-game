@@ -9,20 +9,21 @@ sudo apt install build-essential
 sudo npm install pm2@latest -g
 
 => Test: node hello.js (https://www.songonha.com/2022/12/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04.html)
+=> Test: nginx open block ()
       
 3/ Install Nginx
   ==> Configuration
   sudo systemctl status nginx => running
   
-  Edit => sudo nano /etc/nginx/sites-available/54.169.30.19
+  Edit => sudo nano /etc/nginx/sites-available/165.232.169.244
   server {
         listen 80;
         listen [::]:80;
 
-        root /var/www/54.169.30.19/html;
+        root /var/www/165.232.169.244/html;
         index index.html index.htm index.nginx-debian.html;
 
-        server_name 54.169.30.19;
+        server_name 165.232.169.244;
 
     location / {
         proxy_pass http://localhost:3000;
