@@ -1,17 +1,24 @@
 const https = require("https");
 const app = require("express")();
+const fs = require("fs");
+
+
 app.get("/", (req,res)=> res.sendFile(__dirname + "/index.html"))
 
 app.listen(9091, ()=>console.log("Listening on http port 9091"))
 const websocketServer = require("websocket").server
-const httpsServer = https.createServer();
+const httpsServer = https.createServer({
+    cert: fs.readFileSync('/var/www/thucthuc22.com/public_html/matrixgame/cert/thucthuc22.com.crt'),
+    key: fs.readFileSync('/var/www/thucthuc22.com/public_html/matrixgame/cert/thucthuc22.com.key'),
+});
+
 httpsServer.listen(9090, () => console.log("Listening.. on 9090"))
 //hashmap clients
 const clients = {};
 const games = {};
 
 const wsServer = new websocketServer({
-    "httpServer": httpServer
+    "httpServer": httpsServer
 })
 wsServer.on("request", request => {
     //connect
