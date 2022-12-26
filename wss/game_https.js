@@ -8,8 +8,8 @@ app.get("/", (req,res)=> res.sendFile(__dirname + "/index.html"))
 app.listen(9091, ()=>console.log("Listening on http port 9091"))
 const websocketServer = require("websocket").server
 const httpsServer = https.createServer({
-    cert: fs.readFileSync('/var/www/thucthuc22.com/public_html/matrixgame/cert/cert.pem'),
-    key: fs.readFileSync('/var/www/thucthuc22.com/public_html/matrixgame/cert/privatekey.pem'),
+    cert: fs.readFileSync('./cert/cert.pem'),
+    key: fs.readFileSync('./cert/privkey.pem'),
 });
 
 httpsServer.listen(9090, () => console.log("Listening.. on 9090"))
