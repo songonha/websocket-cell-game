@@ -1,4 +1,4 @@
-## matrix.html                                                                       
+// matrix.html                                                                       
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@
         let gameId = null;
         let playerColor = null;
 
-        let ws = new WebSocket("wss://test.thucthuc22.com:9090/ws")
+        let ws = new WebSocket("wss://example.com:9090/ws")
         const btnCreate = document.getElementById("btnCreate");
         const btnJoin = document.getElementById("btnJoin");
         const txtGameId = document.getElementById("txtGameId");
@@ -70,7 +70,7 @@
             if (response.method === "create"){
                 gameId = response.game.id;
                 console.log("game successfully created with id " + response.game.id + " with " + response.game.balls + " balls")
-                document.getElementById("id_game") = "ID:"+response.game.id;
+            //  document.getElementById("id_game") = "ID:"+response.game.id;
             //  document.write("id_game","ID:"+response.game.id);
             }
 
