@@ -6,3 +6,5 @@ Setup Secure Nginx with Certbot on Ubuntu!
 sudo apt install certbot python3-certbot-nginx
 
 sudo certbot --nginx -d game.songonha.com
+
+Can be connected via http, https, ws, wss => Done!!!
